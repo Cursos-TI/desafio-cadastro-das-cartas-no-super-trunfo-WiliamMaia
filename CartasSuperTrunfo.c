@@ -15,8 +15,10 @@ int main(){
     // char Nome da Cidade: ???
     // int População: ????????
     // float Área: ????.?? km²
-    // float PIB: ???.?? bilhões de reais
+    // float PIB: ???.?? de reais
     // int Número de Pontos Turísticos: ??
+    // float Densidade Populacional: ???
+    // float PIB per Capita: R$ ????
 
 	char estado1, estado2;
     char codigo1[4], codigo2[4];
@@ -25,6 +27,8 @@ int main(){
     float area1, area2;
     float PIB1, PIB2;
     int numerodepontosturisticos1, numerodepontosturisticos2;
+    float densidadepopulacional1, densidadepopulacional2;
+    float PIBpercapta1, PIBpercapta2;
 
     //  Aqui solicitaremos o cadastro da carta
     // Todo 'printf' será a solicitação da informação
@@ -55,6 +59,10 @@ int main(){
     printf("Quanrtos pontos turísticos? \n");
         scanf(" %d", &numerodepontosturisticos1);
 
+    densidadepopulacional1 = (float) populacao1 / area1; // Aqui calculamos a Densidade Populacional
+
+    PIBpercapta1 = (float) PIB1 / populacao1; // Aqui calculamos o PIB per Capita
+
 // Aqui exibirei os dados coletados
 
 	printf("____________________\n\n");
@@ -64,10 +72,12 @@ int main(){
     printf("Nome da Cidade: %s\n", nomedacidade1);
     printf("População: %d\n", populacao1);
     printf("Área: %.2f km²\n", area1);
-    printf("PIB: %.2f bilhões de reais\n", PIB1);
-    printf("Número de pontos turísticos: %d\n\n", numerodepontosturisticos1);
+    printf("PIB: %.2f de reais\n", PIB1);
+    printf("Número de Pontos Turísticos: %d\n", numerodepontosturisticos1);
+    printf("Densidade Populacional: %.2f\n", densidadepopulacional1);  // Adicionada a Densidade Populacional do Nível Aventureiro Tema 1
+    printf("PIB per Capita: R$ %.2f\n\n", PIBpercapta1); // Adicionado o PIB per Capta do Nível Aventureiro Tema 1
 
-// Qui coletaremos as informações para a carta 2
+// Agora coletaremos as informações para a carta 2
 
 	printf("Agora a carta 2\n\n");
     printf("____________________\n\n");
@@ -93,6 +103,10 @@ int main(){
 	printf("Quanrtos pontos turísticos? \n");
 	scanf(" %d", &numerodepontosturisticos2);
 
+    densidadepopulacional2 = (float) populacao2 / area2;
+
+    PIBpercapta2 = (float) PIB2 / populacao2;
+
 	printf("____________________\n\n");
     printf("A carta 2 ficou assim: \n\n");
     printf("Esrado grupo: %c\n", estado2);
@@ -100,8 +114,10 @@ int main(){
     printf("Nome da Cidade: %s\n", nomedacidade2);
     printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
-    printf("PIB: %.2f bilhões de reais\n", PIB2);
-    printf("Número de pontos turísticos: %d\n\n", numerodepontosturisticos2);
+    printf("PIB: %.2f de reais\n", PIB2);
+    printf("Número de Pontos Turísticos: %d\n", numerodepontosturisticos2);
+    printf("Densidade Populacional: %.2f\n", densidadepopulacional2);
+    printf("PIB per Capita: R$ %.2f\n\n", PIBpercapta2);
 
 	printf("Pronto !\n");
 
