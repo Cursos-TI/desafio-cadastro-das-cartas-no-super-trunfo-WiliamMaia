@@ -31,6 +31,13 @@ int main(){
     float densidadepopulacional1, densidadepopulacional2;
     float PIBpercapta1, PIBpercapta2;
     long double superpoder1, superpoder2;  // Precisei mudar para long double para o balor ser exato
+    int populacaoresultado;  // A partir daqui inseri variáveis para comparação
+    int arearesultado;
+    int PIBresultado;
+    int numerodepontosturisticosresultado;
+    int densidadepopulacionalresultado;
+    int PIBpercapitaresultado;
+    int superpoderresultado;
 
     //  Aqui solicitaremos o cadastro da carta
     // Todo 'printf' será a solicitação da informação
@@ -127,8 +134,29 @@ int main(){
     printf("PIB per Capita: R$ %.2f\n", PIBpercapta2);
     printf("Super Poder: %.2Lf\n\n", superpoder2);
 
-	printf("Pronto !\n");
+	printf("Pronto, agora vamos comparar as cartas !\n\n");
+    printf("__________________________\n\n");
+    printf("Quando o resultado for '1', significa que a carta 1 venceu. Porém se for '0' significa que a carta 2 venceu\n\n");
 
+    // Aqui será calculado a diferença das cartas e exibido o resultado como 1 para carta 1 venceu e 0 para carta 2 venceu
+
+    populacaoresultado = populacao1 > populacao2;
+    printf("População da carta 1 VS População da carta 2, o vencedor é %d\n", populacaoresultado);
+    arearesultado = area1 > area2;
+    printf("Área da carta 1 VS Área da carta 2: o vencedor é %d\n", arearesultado);
+    PIBresultado = PIB1 > PIB2;
+    printf("PIB da carta 1 VS PIB da carta 2: o vencedor é %d\n", PIBresultado);
+    numerodepontosturisticosresultado = numerodepontosturisticos1 > numerodepontosturisticos2;
+    printf("Número de Pontos Turísticos da carta 1 VS Número de Pontos Turísticos da carta 2: o vencedor é %d\n", numerodepontosturisticosresultado);
+    densidadepopulacionalresultado = densidadepopulacional1 < densidadepopulacional2;
+    printf("Densidade Populacional da carta 1 VS Densidade Populacional da carta 2: o vencedor é %d\n", densidadepopulacionalresultado);
+    PIBpercapitaresultado = PIBpercapta1 > PIBpercapta2;
+    printf("PIB per Capita da carta 1 VS PIB per capita da cara 2: o vencedor é %d\n", PIBpercapitaresultado);
+    superpoderresultado = superpoder1 > superpoder2;
+    printf("Superpoder da carta 1 VS Superpoder da carta 2: o vencedor é %d\n\n", superpoderresultado);
+
+    printf("FIM !\n\n");
+    
 return 0;
 
 }
