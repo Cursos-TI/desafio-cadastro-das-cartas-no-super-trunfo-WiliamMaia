@@ -22,6 +22,7 @@ int main(){
     // float Super Poder: ??????
 
 	char estado1, estado2;
+    char nomedoestado1[20], nomedoestado2[20];
     char codigo1[4], codigo2[4];
     char nomedacidade1[20], nomedacidade2[20];
     unsigned int populacao1, populacao2;  // Alterei para unsigned int para garantir que o valor seja mantido.
@@ -50,6 +51,9 @@ int main(){
     printf("Qual será a letra que representará o grupo do estado? Por exemplo, A do grupo A\n");
         scanf(" %c", &estado1);
 
+    printf("Qual será o nome do estado? Por favor sem acentuação e espaços, exemplo: SP, ou Sao_Paulo\n");
+        scanf(" %s", &nomedoestado1);
+
     printf("Qual o número da carta? Adicione a letra também para atribuí-la ao grupo. Exemplo: A01\n");
         scanf(" %s", &codigo1);
 
@@ -59,7 +63,7 @@ int main(){
     printf("Informe a população apenas com números: \n");
         scanf(" %u", &populacao1);  // Alterei de %i para %u agora que é undigned int
 
-    printf("Qual a àrea? \n");
+    printf("Qual a área? \n");
         scanf(" %lf", &area1);  // alterei para %lf por ser long double
 
     printf("Qual é o PIB? \n");
@@ -79,6 +83,7 @@ int main(){
     printf("____________________\n\n");
     printf("A carta 1 ficou assim: \n\n");
     printf("Esrado grupo: %c\n", estado1);
+    printf("Nome do Estado: %s\n", nomedoestado1);
     printf("Código: %s\n", codigo1);
     printf("Nome da Cidade: %s\n", nomedacidade1);
     printf("População: %u\n", populacao1);
@@ -95,25 +100,28 @@ int main(){
     printf("____________________\n\n");
 
 	printf("Qual será a letra que representará o grupo do estado? Por exemplo, A do grupo A\n");
-	scanf(" %c", &estado2);
+	    scanf(" %c", &estado2);
+
+    printf("Qual será o nome do estado? Por favor sem acentuação e espaços, exemplo: SP, ou Sao_Paulo\n");
+        scanf(" %s", &nomedoestado2);
 
 	printf("Qual o número da carta? Adicione a letra também para atribuí-la ao grupo. Exemplo: A01\n");
-	scanf(" %s", &codigo2);
+	    scanf(" %s", &codigo2);
 
 	printf("Qual o nome da cidade? Por favor sem espaços e acentuação\n");
-	scanf(" %s", &nomedacidade2);
+	    scanf(" %s", &nomedacidade2);
 
 	printf("Informe a população apenas com números: \n");
-	scanf(" %u", &populacao2);
+	    scanf(" %u", &populacao2);
 
-	printf("Qual a àrea? \n");
-	scanf(" %lf", &area2);
+	printf("Qual a área? \n");
+	    scanf(" %lf", &area2);
 
 	printf("Qual é o PIB? \n");
-	scanf(" %Lf", &PIB2);
+	    scanf(" %Lf", &PIB2);
 
 	printf("Quanrtos pontos turísticos? \n");
-	scanf(" %d", &numerodepontosturisticos2);
+	    scanf(" %d", &numerodepontosturisticos2);
 
     densidadepopulacional2 = (double) populacao2 / area2;
 
@@ -124,6 +132,7 @@ int main(){
 	printf("____________________\n\n");
     printf("A carta 2 ficou assim: \n\n");
     printf("Esrado grupo: %c\n", estado2);
+    printf("Nome do Estado: %s\n", nomedoestado2);
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", nomedacidade2);
     printf("População: %u\n", populacao2);
@@ -160,3 +169,22 @@ int main(){
 return 0;
 
 }
+
+// Aqui eu deixei um exemplo para 2 cartas para sempre que for testar as informações
+// estão mais práticas, pesquisei em relação a 2022 as informações abaico.
+
+// São Paulo em 2022
+// População: 44 420 459 
+// Área: 248 219,481 km²
+// PIB: 3130333000000
+// Número de pontos Turísticos: 36
+// Densidade Populacional: 178,96
+// PIB per Capita: 70.471,00
+// ==============
+// Rio de Janeiro em 2022
+// População: 16 055 174
+// Área: 43 750,425 km²
+// PIB: 1153512000000
+// Número de pontos Turísticos: 58
+// Densidade Populacional: 366,97
+// PIB per Capita: 71.850
