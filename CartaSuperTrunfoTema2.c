@@ -24,7 +24,7 @@ int main(){
     printf("Qual será a letra que representará o grupo do estado? Por exemplo, A do grupo A\n");
         scanf(" %c", &estado1);
     printf("Qual será o nome do estado? Por favor sem acentuação e espaços, exemplo: SP, ou Sao_Paulo\n");
-        scanf(" %s", &nomedoestado1);
+    scanf(" %s", &nomedoestado1);
     printf("Qual o número da carta? Adicione a letra também para atribuí-la ao grupo. Exemplo: A01\n");
         scanf(" %s", &codigo1);
     printf("Qual o nome da cidade? Por favor sem espaços e acentuação\n");
@@ -181,7 +181,7 @@ int main(){
         } break;
 
         default:
-            escolhadojogador = rend() % 8 + 1;
+            printf("Opção inválida !\n");
         break;
     }
 
